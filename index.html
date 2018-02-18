@@ -1,21 +1,58 @@
 <!DOCTYPE html>
+
 <html>
-<head>
-    <title>The AJAXson 5</title>
-    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
-    <script type="text/javascript" src="request-gif.js"></script>
-</head>
-<body>
-    <h1>The AJAXson 5</h1>
 
-    <form id="form-gif-request" />
-        <label>What kind of Jackson 5 related gif do you want?</label>
-        <input name="tag" type="text"/>
-        <input type="submit" value="Get my Gif!" />
-    </form>
+<div class="container-fluid">
+    <head>
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        
+        
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title class="text-center">The AJAXson 5</title>
+        <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+        <script type="text/javascript" src="request-gif.js"></script>
+        <style>
+        .error-message {
+            color: red;
+        }
+        .invalid-field {
+            border: 1px solid red;
+        }
+         </style>
+    </head>
+    <body>
+        <h1 class="text-center">The AJAXson 5</h1>
 
-    <img id="gif" src="" hidden="true"/>
-    <p id="feedback" hidden="true`"></p>
-
-</body>
+        <form  id="form-gif-request" />
+            <div class="container">
+                <div class="row bg-light rounded">
+                    <div class="col-sm">
+                        <label for="tag">What kind of Jackson 5 related gif do you want?</label>
+                        <input id="user-input" class="rounded" name="tag" type="text"/>
+                     </div>
+                </div>
+                <br>
+                <div class="row bg-light rounded">
+                    <div class="col-sm">
+                        <label for="validate">Prove you are probably not a robot by answering this riddle:</label>
+                        <input class="rounded" id="validate" name="validate" type="text"/>
+                    
+                        <b>Jacksons are better than one</b>
+                        <label class="error-message text-center"></label>
+                       
+                        <input class="btn btn-block btn-primary" id="inputSubmit" type="submit" value="Get my Gif!" />
+                     </div>
+                 </div>
+            </div>
+        </form>  
+        <p id="loading" class="text-center"></p> <br>
+    <img  class="img-fluid rounded mx-auto d-block"  id="gif" src="" hidden="true"/>
+    <p id="feedback" hidden="true"></p>
+   
+    </body>
+</div>  
 </html>
+
